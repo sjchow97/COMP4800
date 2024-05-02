@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RSS Feed</title>
+</head>
+
+<body>
+    <h1>RSS Feed Entries</h1>
+    <ul>
+        {% for entry in feed_entries %}
+        <li>
+            <h2><a href="{{ entry.link }}">{{ entry.title }}</a></h2>
+            <p>{{ entry.description }}</p>
+            <!-- <p>Published: {{ entry.published }}</p> -->
+            <!-- <p>Author: {{ entry.author }}</p> -->
+            <!-- Add more HTML to display additional attributes -->
+        </li>
+        <br> {% endfor %}
+    </ul>
+</body>
+
+</html>
