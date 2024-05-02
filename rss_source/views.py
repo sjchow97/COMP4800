@@ -11,10 +11,11 @@ def index(request):
         feed_entry = {
             'title': entry.title,
             'link': entry.link,
-            # 'pubDate': entry.pubDate,
+            'published': entry.published,
             'description': entry.description,
             
             # Add more attributes as needed
         }
         feed_entries.append(feed_entry)
+        # print(entry)
     return render(request, 'index.html', {'feed_entries': feed_entries})
