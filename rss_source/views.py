@@ -4,7 +4,8 @@ import feedparser
 
 
 def index(request):
-    feeds = feedparser.parse("https://johnsmallman.wordpress.com/author/johnsmallman/feed/")
+    # feeds = feedparser.parse("https://johnsmallman.wordpress.com/author/johnsmallman/feed/")
+    feeds = feedparser.parse("https://www.yellowknife.ca/Modules/News/en//rss")
     feed_entries = []
     for entry in feeds.entries:
         feed_entry = {
